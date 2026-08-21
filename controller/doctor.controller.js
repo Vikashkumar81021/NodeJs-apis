@@ -37,7 +37,7 @@ const getDoctor = async (req, res) => {
       //   "slotTime.endTime": { $gte: istTime },
     });
     return res.status(200).json({
-      message: "Is time pe available doctors",
+      message: "Doctor is availabe at this Time",
       data: doctors,
     });
   } catch (error) {

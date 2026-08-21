@@ -56,9 +56,10 @@ const loginUser = async (req, res) => {
     isExist.loginCount = 0;
     isExist.untilTime = null;
     await isExist.save();
+
     const token = await generateToken(isExist._id);
     res.cookie("auth", token, {
-      httpOnly: true,
+      httpOnly: false,
       secure: false,
       maxAge: 24 * 60 * 60 * 1000,
     });
