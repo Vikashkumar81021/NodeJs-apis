@@ -43,8 +43,7 @@ const generateShowSeats = async (req, res) => {
       seatNumber,
       status: "available",
     });
-    seatId.totalSeats -= 1;
-    await seatId.save();
+
     return res
       .status(200)
       .json({ message: "Generate seats successfully", data: createSeat });
