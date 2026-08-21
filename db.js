@@ -5,7 +5,7 @@ const db = async () => {
     await mongoose.connect("mongodb://localhost:27017/MultiTent");
     console.log(`db connection successfully`);
   } catch (error) {
-    console.log("db connection failed");
+    console.log("db connection failed", error);
   }
 };
 
